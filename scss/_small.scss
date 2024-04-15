@@ -90,7 +90,7 @@ section div {
     }
     h2 {
         font-size: 1rem;
-        background-color: $secondaryColor;
+        background-color: darken($secondaryColor, 10%);
         color: rgb(255, 255, 255);
         margin: 0;
         padding: 1rem;
