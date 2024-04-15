@@ -1,4 +1,19 @@
 header {
     padding: 1.8rem $gutter;
-    h1 {font-size: 2rem;}
+    h1 {font-size: 1.7rem;}
+}
+
+nav {
+    ul {
+        display: flex;
+
+    } // end ul
+    ul li a {
+        border: none;
+    }
+} //end nav
+
+//main
+section {
+    grid-template-columns: 1fr 1fr;
 }

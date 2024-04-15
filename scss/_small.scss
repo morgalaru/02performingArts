@@ -18,10 +18,11 @@ body {
     font-family: $defaultFont;
     font-weight: $normalWeight;
     color: $fontColor;
+    background-color: rgb(238, 235, 227);
 }
 
 #headerWrapper {
-    background-color: #c5ded0;
+    background-color: rgb(238, 235, 227);
     color: $secondaryColor;
 }
 header {
@@ -31,47 +32,83 @@ header {
     gap: 10px;
     h1 {
         margin: 0;
-        font-size: 1.8rem;
+        font-size: 1.1rem;
         font-weight: $boldWeight;
+    }
+    h1, img {
+        margin-right: auto;
     }
     a {
         color: $fontColor;
         text-decoration: none;
-        margin-left: auto;
         &:hover {color: $secondaryColor}
     }
 }
 
 #navWrapper {
-    background-color: #d6e6df;
+    background-color: #393939ee;
 }
 
 nav {
-    ul{
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        li {flex:1;}
-    }
-    li.active {background-color: #b9d1c6;}
-    a {
-        display: block;
-        padding: 0.75rem;
-        color: $fontColor;
-        text-align: center;
+
+    ul li a {
+        color: rgb(224, 224, 224);
         text-decoration: none;
-        &:hover {color: $secondaryColor}
+        display: block;
+        padding: .9rem 2vw;
+    }
+    ul {
+        list-style-type: none;
+        padding: .5rem;
+        margin: 0;
+    }
+
+    ul li a:hover {
+        color: lighten($secondaryColor, 20%);
+    } // end hover
+    
+    ul li.active a {background-color: rgb(96, 96, 96); border-radius: 4px;} //end active
+} // end nav
+
+
+//main
+main h1 {
+    padding: 1rem $gutter;
+    padding-bottom: 0;
+}
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+section div {
+    width: 100%;
+    padding: 1rem $gutter;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    h2 {
+        font-size: 1rem;
+        background-color: $secondaryColor;
+        color: rgb(224, 224, 224);
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
     }
 }
 
+
+
+
+
 // begin footer
 #footerWrapper {
-    background-color: #e7f0ec;
     padding: .8rem $gutter;
     p {
         margin: 0;
         font-weight: $lightWeight;
         text-align: center;
+        font-size: .7rem;
     }
 }

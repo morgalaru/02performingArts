@@ -330,10 +330,11 @@ body {
   font-family: "Domine", serif;
   font-weight: 500;
   color: #222222;
+  background-color: rgb(238, 235, 227);
 }
 
 #headerWrapper {
-  background-color: #c5ded0;
+  background-color: rgb(238, 235, 227);
   color: #af4a43;
 }
 
@@ -345,53 +346,78 @@ header {
 }
 header h1 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.1rem;
   font-weight: 700;
+}
+header h1, header img {
+  margin-right: auto;
 }
 header a {
   color: #222222;
   text-decoration: none;
-  margin-left: auto;
 }
 header a:hover {
   color: #af4a43;
 }
 
 #navWrapper {
-  background-color: #d6e6df;
+  background-color: rgba(57, 57, 57, 0.9333333333);
 }
 
+nav ul li a {
+  color: rgb(224, 224, 224);
+  text-decoration: none;
+  display: block;
+  padding: 0.9rem 2vw;
+}
 nav ul {
   list-style-type: none;
-  padding: 0;
+  padding: 0.5rem;
   margin: 0;
-  display: flex;
 }
-nav ul li {
-  flex: 1;
+nav ul li a:hover {
+  color: #d18c87;
 }
-nav li.active {
-  background-color: #b9d1c6;
+nav ul li.active a {
+  background-color: rgb(96, 96, 96);
+  border-radius: 4px;
 }
-nav a {
-  display: block;
-  padding: 0.75rem;
-  color: #222222;
+
+main h1 {
+  padding: 1rem 16px;
+  padding-bottom: 0;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+section div {
+  width: 100%;
+  padding: 1rem 16px;
+}
+section div img {
+  width: 100%;
+  height: auto;
+}
+section div h2 {
+  font-size: 1rem;
+  background-color: #af4a43;
+  color: rgb(224, 224, 224);
+  margin: 0;
+  padding: 1rem;
   text-align: center;
-  text-decoration: none;
-}
-nav a:hover {
-  color: #af4a43;
 }
 
 #footerWrapper {
-  background-color: #e7f0ec;
   padding: 0.8rem 16px;
 }
 #footerWrapper p {
   margin: 0;
   font-weight: 300;
   text-align: center;
+  font-size: 0.7rem;
 }
 
 @media only screen and (min-width: 35rem) {
@@ -399,12 +425,31 @@ nav a:hover {
     padding: 1.8rem 16px;
   }
   header h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
+  }
+  nav ul {
+    display: flex;
+  }
+  nav ul li a {
+    border: none;
+  }
+  section {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media only screen and (min-width: 60rem) {
   header, nav, main, footer {
-    max-width: 60rem;
+    max-width: 75rem;
     margin: auto;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  nav ul li a {
+    padding: 0.7rem 2rem;
+    font-size: 0.9rem;
+  }
+  section {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
